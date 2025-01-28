@@ -1,0 +1,2 @@
+const e=["/Checklistv0/","/Checklistv0/index.html","/Checklistv0/style.css","/Checklistv0/app.js","/Checklistv0/manifest.json","/Checklistv0/icons/icon-128.png","/Checklistv0/icons/icon-512.png"];self.addEventListener("install",t=>{t.waitUntil(caches.open("to-do-pwa-cache-v1").then(t=>t.addAll(e)))}),self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(t=>t||fetch(e.request)))});
+//# sourceMappingURL=service-worker.be7c302f.js.map
