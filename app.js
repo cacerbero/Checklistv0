@@ -30,6 +30,7 @@ console.log("Firebase App initialized", app);
 
 // Initialize Firestore
 const db = getFirestore(app);
+console.log("Firestored initialized", db);
 
 //DOM Elements
 const taskInput = document.getElementById("taskInput");
@@ -55,7 +56,7 @@ addTaskBtn.addEventListener("click", async () => {
     let taskId = await addTaskToFirestore(taskText);
     taskInput.value = "";
 
-    createLiTask(taskId, task);
+    createLiTask(taskId, taskText);
   } else {
     alert("Please enter a task!");
   }
